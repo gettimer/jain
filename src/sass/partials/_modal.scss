@@ -1,0 +1,98 @@
+.modal-dialog {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    visibility:hidden;
+    z-index:99;
+
+    &:before {
+        content:"";
+        width:100vw;
+        height:100vh;
+        background-color:rgba(black,0);
+        position:absolute;
+        top:0;
+        left:0;
+        transition:all .1s;
+    }
+
+    .modal-body {
+        width:50%;
+        height:100vh;
+        background-color:white;
+        position:absolute;
+        top:0;
+        right:-100%;
+        transition:all .3s;
+
+        .modal-header {
+            width:100%;
+            height:rem(100);
+            padding:0 rem(30);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .modal-title {
+                font-size:rem(23);
+                color:var(--dark-blue);
+                font-family: "ObjektivBold";
+            }
+
+            .close-modal {
+                background-color:transparent;
+                border:0;
+                cursor:pointer;
+                svg {
+                    transition:all .3s;
+                }
+                &:hover {
+                    svg {
+                        transform:rotate(180deg);
+                        g {
+                            fill:#039EDA;
+                        }
+                    }
+                }
+            }
+
+        }
+        .modal-content {
+            width:100%;
+            height:calc(100vh - 100px);
+            padding:rem(30);
+            position:relative;
+        }
+
+        &-sm {
+            width:30%;
+        }
+
+    }
+
+    &.in {
+        visibility:visible;
+        &:before {
+            background-color:rgba(black,.7);
+        }
+        .modal-body {
+            right:0;
+        }
+    }
+}
+
+@media #{$mobile} {
+    .modal-dialog {
+        .modal-body {
+            width:100%;
+            .modal-header {
+                height:rem(70);
+                .modal-title {
+                    font-size:rem(18);
+                }
+            }
+        }
+    }
+}

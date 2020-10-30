@@ -1,0 +1,551 @@
+{% extends "./_layouts/_default.html" %}
+
+{% block globalVars %}
+    {% set id = 'home-page' %}
+    {% set title = 'Anasayfa' %}
+    {% set currentPage = 'home' %}
+{% endblock %}
+
+{% block main %}
+    <header>
+        <div class="grid">
+            <div class="col-12">
+                <div class="header-wrapper pb-70">
+                    <button class="toggle-push-menu">
+                        <svg width="33px" height="25px" viewBox="0 0 33 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="menu-(1)">
+                                    <path d="M30.130102,0 L10.869898,0 C9.2869898,0 8,1.346 8,3 C8,4.65466667 9.2869898,6 10.869898,6 L30.130102,6 C31.7123724,6 33,4.65466667 33,3 C33,1.346 31.7123724,0 30.130102,0 Z" id="Path" fill="#142577"></path>
+                                    <path d="M30.130102,10 L10.869898,10 C9.2869898,10 8,11.346 8,13 C8,14.6546667 9.2869898,16 10.869898,16 L30.130102,16 C31.7123724,16 33,14.6546667 33,13 C33,11.346 31.7123724,10 30.130102,10 Z" id="Path" fill="#142577"></path>
+                                    <path d="M30.130102,19 L10.869898,19 C9.2869898,19 8,20.346 8,22 C8,23.6546667 9.2869898,25 10.869898,25 L30.130102,25 C31.7123724,25 33,23.6546667 33,22 C33,20.346 31.7123724,19 30.130102,19 Z" id="Path" fill="#142577"></path>
+                                    <path d="M3,0 C1.34533333,0 0,1.346 0,3 C0,4.65466667 1.34533333,6 3,6 C4.654,6 6,4.65466667 6,3 C6,1.346 4.654,0 3,0 Z" id="Path" fill="#039EDA"></path>
+                                    <path d="M3,10 C1.34533333,10 0,11.346 0,13 C0,14.6546667 1.34533333,16 3,16 C4.654,16 6,14.6546667 6,13 C6,11.346 4.654,10 3,10 Z" id="Path" fill="#039EDA"></path>
+                                    <path d="M3,19 C1.34533333,19 0,20.346 0,22 C0,23.6546667 1.34533333,25 3,25 C4.654,25 6,23.6546667 6,22 C6,20.346 4.654,19 3,19 Z" id="Path" fill="#039EDA"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="wellcome">
+                        <small>Hoşgeldiniz</small>
+                        Özeroğlu Tarım
+                    </div>
+                    <div class="tool-box">
+                        {% include '/_partials/_header_buttons.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section-wrapper relative-60">
+            <div class="grid">
+                <div class="col-md-9">
+                    <div class="order-summary">
+                        <div class="summary-header">
+                            <span class="title">Son Siparişleriniz</span>
+                            <a href="" class="create-new-order">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 15.5H0.5V0.5H13.5V5.5" stroke="#039EDA" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.5 4.5H10.5" stroke="#039EDA" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.5 10.5H4.5" stroke="#039EDA" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.5 4.5H4.5" stroke="#039EDA" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.5 7.5H6.5" stroke="#039EDA" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.5 15.5C13.7091 15.5 15.5 13.7091 15.5 11.5C15.5 9.29086 13.7091 7.5 11.5 7.5C9.29086 7.5 7.5 9.29086 7.5 11.5C7.5 13.7091 9.29086 15.5 11.5 15.5Z" stroke="#039EDA" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.5 9.5V13.5" stroke="#039EDA" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.5 11.5H13.5" stroke="#039EDA" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Yeni Sipariş
+                            </a>
+                        </div>
+                        <table class="order-table mt-40">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Sipariş No</th>
+                                    <th>Sipariş Tarihi</th>
+                                    <th>Sipariş Tutarı</th>
+                                    <th>Sipariş Durumu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="soft">1</span></td>
+                                    <td data-title="Sipariş No">587648263</td>
+                                    <td data-title="Sipariş Tarihi">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                            <path d="M10.875 2.21875H1.125C0.711 2.21875 0.375 2.52675 0.375 2.90625V10.4688C0.375 10.8482 0.711 11.1562 1.125 11.1562H10.875C11.289 11.1562 11.625 10.8482 11.625 10.4688V2.90625C11.625 2.52675 11.289 2.21875 10.875 2.21875Z" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M0.375 4.28125H11.625" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.375 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.625 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0">
+                                            <rect width="12" height="11" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        19 Ağustos 2020
+                                    </td>
+                                    <td data-title="Sipariş Tutarı">
+                                        2.969,00 ₺
+                                    </td>
+                                    <td data-title="Sipariş Durumu">
+                                        <span class="order-status order-status--stage">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0)">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.375 5.25H10.5L13.5625 6.125V11.8125H8.26874C8.06606 12.811 7.18329 13.5625 6.125 13.5625C5.06671 13.5625 4.18394 12.811 3.98126 11.8125H0.4375V0.4375H4.375V5.25ZM4.375 0.4375V0H8.50477L8.67104 0.4375H4.375ZM8.67104 0.4375L10.5 5.25L8.75 0.4375H8.67104Z" fill="#039EDA"/>
+                                                <path d="M4.375 5.25H3.875C3.875 5.52614 4.09886 5.75 4.375 5.75V5.25ZM13.5625 6.125H14.0625C14.0625 5.90176 13.9145 5.70557 13.6999 5.64424L13.5625 6.125ZM13.5625 11.8125V12.3125C13.8386 12.3125 14.0625 12.0886 14.0625 11.8125H13.5625ZM8.26874 11.8125V11.3125C8.03094 11.3125 7.82604 11.48 7.77874 11.713L8.26874 11.8125ZM3.98126 11.8125L4.47126 11.713C4.42396 11.48 4.21906 11.3125 3.98126 11.3125V11.8125ZM0.4375 11.8125H-0.0625C-0.0625 12.0886 0.161358 12.3125 0.4375 12.3125L0.4375 11.8125ZM0.4375 0.4375V-0.0625C0.161358 -0.0625 -0.0625 0.161358 -0.0625 0.4375H0.4375ZM4.375 0V-0.5C4.09886 -0.5 3.875 -0.276142 3.875 0L4.375 0ZM8.50477 0L8.97215 -0.177627C8.8984 -0.371699 8.71238 -0.5 8.50477 -0.5V0ZM8.75 0.4375L9.2199 0.266628C9.14804 0.0690339 8.96025 -0.0625 8.75 -0.0625V0.4375ZM10.5 4.75H4.375V5.75H10.5V4.75ZM10.3626 5.73076L13.4251 6.60576L13.6999 5.64424L10.6374 4.76924L10.3626 5.73076ZM13.0625 6.125V11.8125H14.0625V6.125H13.0625ZM13.5625 11.3125H8.26874V12.3125H13.5625V11.3125ZM6.125 14.0625C7.42577 14.0625 8.5097 13.1389 8.75875 11.912L7.77874 11.713C7.62242 12.4831 6.94082 13.0625 6.125 13.0625V14.0625ZM3.49125 11.912C3.7403 13.1389 4.82423 14.0625 6.125 14.0625V13.0625C5.30918 13.0625 4.62758 12.4831 4.47126 11.713L3.49125 11.912ZM3.98126 11.3125H0.4375V12.3125H3.98126V11.3125ZM0.9375 11.8125V0.4375H-0.0625V11.8125H0.9375ZM0.4375 0.9375H4.375V-0.0625H0.4375V0.9375ZM4.875 5.25V0.4375H3.875V5.25H4.875ZM4.875 0.4375V0H3.875V0.4375H4.875ZM4.375 0.5H8.50477V-0.5H4.375V0.5ZM8.03738 0.177627L8.20365 0.615127L9.13842 0.259873L8.97215 -0.177627L8.03738 0.177627ZM4.375 0.9375H8.67104V-0.0625H4.375V0.9375ZM8.20365 0.615127L10.0326 5.42763L10.9674 5.07237L9.13842 0.259873L8.20365 0.615127ZM8.2801 0.608372L10.0301 5.42087L10.9699 5.07913L9.2199 0.266628L8.2801 0.608372ZM8.67104 0.9375H8.75V-0.0625H8.67104V0.9375Z" fill="#039EDA"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0">
+                                                <rect width="14" height="14" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                             </svg>
+                                                
+                                            Sevkiyat Aşamasında
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="soft">1</span></td>
+                                    <td data-title="Sipariş No">587648263</td>
+                                    <td data-title="Sipariş Tarihi">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                            <path d="M10.875 2.21875H1.125C0.711 2.21875 0.375 2.52675 0.375 2.90625V10.4688C0.375 10.8482 0.711 11.1562 1.125 11.1562H10.875C11.289 11.1562 11.625 10.8482 11.625 10.4688V2.90625C11.625 2.52675 11.289 2.21875 10.875 2.21875Z" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M0.375 4.28125H11.625" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.375 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.625 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0">
+                                            <rect width="12" height="11" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        19 Ağustos 2020
+                                    </td>
+                                    <td data-title="Sipariş Tutarı">
+                                        2.969,00 ₺
+                                    </td>
+                                    <td data-title="Sipariş Durumu">
+                                        <span class="order-status order-status--awaiting">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.4375 13.5625C10.8202 13.5625 13.5625 10.8202 13.5625 7.4375C13.5625 4.05476 10.8202 1.3125 7.4375 1.3125C4.05476 1.3125 1.3125 4.05476 1.3125 7.4375C1.3125 10.8202 4.05476 13.5625 7.4375 13.5625Z" stroke="#FFA238" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4375 13.5625C10.8202 13.5625 13.5625 10.8202 13.5625 7.4375C13.5625 4.05476 10.8202 1.3125 7.4375 1.3125C4.05476 1.3125 1.3125 4.05476 1.3125 7.4375C1.3125 10.8202 4.05476 13.5625 7.4375 13.5625ZM4.45895 4.45895C4.65421 4.26368 4.97079 4.26368 5.16605 4.45895L7.64461 6.9375H11.8125C12.0886 6.9375 12.3125 7.16136 12.3125 7.4375C12.3125 7.71364 12.0886 7.9375 11.8125 7.9375H7.4375C7.30489 7.9375 7.17771 7.88482 7.08395 7.79105L4.45895 5.16605C4.26368 4.97079 4.26368 4.65421 4.45895 4.45895ZM7.9375 3.0625C7.9375 2.78636 7.71364 2.5625 7.4375 2.5625C7.16136 2.5625 6.9375 2.78636 6.9375 3.0625V3.9375C6.9375 4.21364 7.16136 4.4375 7.4375 4.4375C7.71364 4.4375 7.9375 4.21364 7.9375 3.9375V3.0625ZM7.4375 10.4375C7.71364 10.4375 7.9375 10.6614 7.9375 10.9375V11.8125C7.9375 12.0886 7.71364 12.3125 7.4375 12.3125C7.16136 12.3125 6.9375 12.0886 6.9375 11.8125V10.9375C6.9375 10.6614 7.16136 10.4375 7.4375 10.4375ZM3.0625 6.9375C2.78636 6.9375 2.5625 7.16136 2.5625 7.4375C2.5625 7.71364 2.78636 7.9375 3.0625 7.9375H3.9375C4.21364 7.9375 4.4375 7.71364 4.4375 7.4375C4.4375 7.16136 4.21364 6.9375 3.9375 6.9375H3.0625Z" fill="#FFA238"/>
+                                            </svg>
+                                            Onay Bekliyor
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="soft">1</span></td>
+                                    <td data-title="Sipariş No">587648263</td>
+                                    <td data-title="Sipariş Tarihi">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                            <path d="M10.875 2.21875H1.125C0.711 2.21875 0.375 2.52675 0.375 2.90625V10.4688C0.375 10.8482 0.711 11.1562 1.125 11.1562H10.875C11.289 11.1562 11.625 10.8482 11.625 10.4688V2.90625C11.625 2.52675 11.289 2.21875 10.875 2.21875Z" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M0.375 4.28125H11.625" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.375 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.625 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0">
+                                            <rect width="12" height="11" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        19 Ağustos 2020
+                                    </td>
+                                    <td data-title="Sipariş Tutarı">
+                                        2.969,00 ₺
+                                    </td>
+                                    <td data-title="Sipariş Durumu">
+                                        <span class="order-status order-status--approved">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="7" cy="7" r="6.125" stroke="#119D4E" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 13.125C10.3827 13.125 13.125 10.3827 13.125 7C13.125 3.61726 10.3827 0.875 7 0.875C3.61726 0.875 0.875 3.61726 0.875 7C0.875 10.3827 3.61726 13.125 7 13.125ZM10.842 5.17727C11.0434 4.9884 11.0536 4.67199 10.8648 4.47053C10.6759 4.26907 10.3595 4.25887 10.158 4.44773L5.83333 8.50213L3.84197 6.63523C3.64051 6.44637 3.3241 6.45657 3.13523 6.65803C2.94637 6.85949 2.95657 7.1759 3.15803 7.36477L5.49136 9.55227C5.68369 9.73258 5.98298 9.73258 6.1753 9.55227L10.842 5.17727Z" fill="#119D4E"/>
+                                            </svg>
+                                            Teslim Edildi
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="soft">1</span></td>
+                                    <td data-title="Sipariş No">587648263</td>
+                                    <td data-title="Sipariş Tarihi">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                            <path d="M10.875 2.21875H1.125C0.711 2.21875 0.375 2.52675 0.375 2.90625V10.4688C0.375 10.8482 0.711 11.1562 1.125 11.1562H10.875C11.289 11.1562 11.625 10.8482 11.625 10.4688V2.90625C11.625 2.52675 11.289 2.21875 10.875 2.21875Z" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M0.375 4.28125H11.625" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.375 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.625 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0">
+                                            <rect width="12" height="11" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        19 Ağustos 2020
+                                    </td>
+                                    <td data-title="Sipariş Tutarı">
+                                        2.969,00 ₺
+                                    </td>
+                                    <td data-title="Sipariş Durumu">
+                                        <span class="order-status order-status--awaiting">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.4375 13.5625C10.8202 13.5625 13.5625 10.8202 13.5625 7.4375C13.5625 4.05476 10.8202 1.3125 7.4375 1.3125C4.05476 1.3125 1.3125 4.05476 1.3125 7.4375C1.3125 10.8202 4.05476 13.5625 7.4375 13.5625Z" stroke="#FFA238" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4375 13.5625C10.8202 13.5625 13.5625 10.8202 13.5625 7.4375C13.5625 4.05476 10.8202 1.3125 7.4375 1.3125C4.05476 1.3125 1.3125 4.05476 1.3125 7.4375C1.3125 10.8202 4.05476 13.5625 7.4375 13.5625ZM4.45895 4.45895C4.65421 4.26368 4.97079 4.26368 5.16605 4.45895L7.64461 6.9375H11.8125C12.0886 6.9375 12.3125 7.16136 12.3125 7.4375C12.3125 7.71364 12.0886 7.9375 11.8125 7.9375H7.4375C7.30489 7.9375 7.17771 7.88482 7.08395 7.79105L4.45895 5.16605C4.26368 4.97079 4.26368 4.65421 4.45895 4.45895ZM7.9375 3.0625C7.9375 2.78636 7.71364 2.5625 7.4375 2.5625C7.16136 2.5625 6.9375 2.78636 6.9375 3.0625V3.9375C6.9375 4.21364 7.16136 4.4375 7.4375 4.4375C7.71364 4.4375 7.9375 4.21364 7.9375 3.9375V3.0625ZM7.4375 10.4375C7.71364 10.4375 7.9375 10.6614 7.9375 10.9375V11.8125C7.9375 12.0886 7.71364 12.3125 7.4375 12.3125C7.16136 12.3125 6.9375 12.0886 6.9375 11.8125V10.9375C6.9375 10.6614 7.16136 10.4375 7.4375 10.4375ZM3.0625 6.9375C2.78636 6.9375 2.5625 7.16136 2.5625 7.4375C2.5625 7.71364 2.78636 7.9375 3.0625 7.9375H3.9375C4.21364 7.9375 4.4375 7.71364 4.4375 7.4375C4.4375 7.16136 4.21364 6.9375 3.9375 6.9375H3.0625Z" fill="#FFA238"/>
+                                            </svg>
+                                            Onay Bekliyor
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="soft">1</span></td>
+                                    <td data-title="Sipariş No">587648263</td>
+                                    <td data-title="Sipariş Tarihi">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                            <path d="M10.875 2.21875H1.125C0.711 2.21875 0.375 2.52675 0.375 2.90625V10.4688C0.375 10.8482 0.711 11.1562 1.125 11.1562H10.875C11.289 11.1562 11.625 10.8482 11.625 10.4688V2.90625C11.625 2.52675 11.289 2.21875 10.875 2.21875Z" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M0.375 4.28125H11.625" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.375 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.625 0.84375V2.21875" stroke="#B7B9BE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0">
+                                            <rect width="12" height="11" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        19 Ağustos 2020
+                                    </td>
+                                    <td data-title="Sipariş Tutarı">
+                                        2.969,00 ₺
+                                    </td>
+                                    <td data-title="Sipariş Durumu">
+                                        <span class="order-status order-status--approved">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="7" cy="7" r="6.125" stroke="#119D4E" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 13.125C10.3827 13.125 13.125 10.3827 13.125 7C13.125 3.61726 10.3827 0.875 7 0.875C3.61726 0.875 0.875 3.61726 0.875 7C0.875 10.3827 3.61726 13.125 7 13.125ZM10.842 5.17727C11.0434 4.9884 11.0536 4.67199 10.8648 4.47053C10.6759 4.26907 10.3595 4.25887 10.158 4.44773L5.83333 8.50213L3.84197 6.63523C3.64051 6.44637 3.3241 6.45657 3.13523 6.65803C2.94637 6.85949 2.95657 7.1759 3.15803 7.36477L5.49136 9.55227C5.68369 9.73258 5.98298 9.73258 6.1753 9.55227L10.842 5.17727Z" fill="#119D4E"/>
+                                            </svg>
+                                            Teslim Edildi
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a class="view-all-orders mt-30" href="">
+                            Tüm Siparişleri Gör
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.875 1.25L6.125 6.5L0.875 11.75" stroke="#87898F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                                
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 first-order">
+                    <div class="user-card">
+                        <img src="img/useravatar.png">
+                        <div class="user-name-display">
+                            Kemal ÇETİNER
+                            <small>Müşteri Temsilciniz</small>
+                        </div>
+                        <ul>
+                            <li>
+                                <i>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                        <path d="M8.03068 9.21289L7.10406 10.3723C5.6684 9.52808 4.47186 8.33155 3.62768 6.89589L4.78706 5.96926C4.92289 5.86052 5.01888 5.70984 5.06004 5.54078C5.1012 5.37171 5.08521 5.19378 5.01456 5.03476L3.95843 2.65651C3.88272 2.48591 3.74888 2.34774 3.58077 2.26665C3.41265 2.18556 3.2212 2.16682 3.04056 2.21376L1.02806 2.73876C0.839874 2.78686 0.676102 2.9028 0.568213 3.06431C0.460323 3.22582 0.415928 3.42151 0.443557 3.61376C0.796996 6.12607 1.95875 8.45502 3.75319 10.2485C5.54763 12.042 7.87719 13.2025 10.3897 13.5546C10.5819 13.5823 10.7776 13.5379 10.9391 13.43C11.1006 13.3221 11.2166 13.1583 11.2647 12.9701L11.7897 10.9576C11.8364 10.7771 11.8175 10.5859 11.7365 10.4179C11.6554 10.25 11.5174 10.1163 11.3469 10.0406L8.96518 8.98626C8.80626 8.91552 8.62839 8.89939 8.45933 8.94038C8.29027 8.98138 8.13955 9.0772 8.03068 9.21289V9.21289Z" stroke="#061D10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.4375 3.5C8.24973 3.5 9.02868 3.82266 9.60301 4.39699C10.1773 4.97132 10.5 5.75027 10.5 6.5625" stroke="#061D10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.4375 0.875C8.18439 0.875 8.92397 1.02211 9.61401 1.30794C10.3041 1.59376 10.931 2.0127 11.4592 2.54083C11.9873 3.06896 12.4062 3.69595 12.6921 4.38599C12.9779 5.07603 13.125 5.81561 13.125 6.5625" stroke="#061D10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect width="14" height="14" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                        
+                                </i>
+                                0 (500) 123 45 67
+                            </li>
+                            <li>
+                                <i>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                        <path d="M12.6875 11.8125H1.3125C0.8295 11.8125 0.4375 11.4205 0.4375 10.9375V3.0625C0.4375 2.5795 0.8295 2.1875 1.3125 2.1875H12.6875C13.1705 2.1875 13.5625 2.5795 13.5625 3.0625V10.9375C13.5625 11.4205 13.1705 11.8125 12.6875 11.8125Z" stroke="#061D10" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M0.4375 4.375L7 7.875L13.5625 4.375" stroke="#061D10" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect width="14" height="14" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </i>
+                                kemal.cetiner@jain.com.tr
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="slider mt-40">
+                        <span class="dashboard-title mb-30">
+                            Kampanyalar
+                        </span>
+                        <div class="splide" data-slider="true" data-nav="true" data-perpage="2">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <a class="campaign-slider-item" href="">
+                                            <div class="cover" style="background-image:url('img/kampanya.jpg')"></div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a class="campaign-slider-item" href="">
+                                            <div class="cover" style="background-image:url('img/kampanya.jpg')"></div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a class="campaign-slider-item" href="">
+                                            <div class="cover" style="background-image:url('img/kampanya.jpg')"></div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a class="campaign-slider-item" href="">
+                                            <div class="cover" style="background-image:url('img/kampanya.jpg')"></div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a class="campaign-slider-item" href="">
+                                            <div class="cover" style="background-image:url('img/kampanya.jpg')"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="order-chart mt-100">
+                        <div class="dashboard-title dashboard-title--xs-column-order mb-30 mt-10">
+                            Aylara Göre Siparişleriniz ve Ödemeleriniz
+                            <div class="selectors">
+                                <button class="selector-handler active" data-chart="multiple">
+                                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 4.5C0 2.84315 1.34315 1.5 3 1.5C4.65685 1.5 6 2.84315 6 4.5C6 6.15685 4.65685 7.5 3 7.5C1.34315 7.5 0 6.15685 0 4.5Z" fill="#039EDA"/>
+                                        <path d="M7 1.25C5.20507 1.25 3.75 2.70507 3.75 4.5C3.75 6.29493 5.20507 7.75 7 7.75C8.79493 7.75 10.25 6.29493 10.25 4.5C10.25 2.70507 8.79493 1.25 7 1.25Z" fill="#142577" stroke="white" stroke-width="0.5"/>
+                                    </svg>
+                                    Tümü
+                                </button>
+                                <button class="selector-handler" data-chart="order">
+                                    <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="3" cy="3.5" r="3" fill="#039EDA"/>
+                                    </svg>
+                                    Sipariş
+                                </button>
+                                <button class="selector-handler" data-chart="payment">
+                                    <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="3" cy="3.5" r="3" fill="#142577"/>
+                                    </svg> 
+                                    Ödeme
+                                </button>
+                            </div>
+                        </div>
+                        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}
+
+{% block scripts %}
+<script src="/canvas.min.js"></script>
+<script>
+
+    function toggleDataSeries(e) {
+        if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        }
+        else {
+            e.dataSeries.visible = true;
+        }
+        chart.render();
+    }
+    function multipleCharts() {
+        var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title:{
+            text: ""
+        },	
+        axisY: {
+            title: "",
+            titleFontColor: "#039EDA",
+            lineColor: "#039EDA",
+            labelFontColor: "#039EDA",
+            tickColor: "#039EDA",
+            gridColor: "#EEF0EF"
+        },
+        axisY2: {
+            title: "",
+            titleFontColor: "#142577",
+            lineColor: "#142577",
+            labelFontColor: "#142577",
+            tickColor: "#142577"
+        },	
+        toolTip: {
+            shared: true
+        },
+        legend: {
+            cursor:"pointer",
+            itemclick: toggleDataSeries
+        },
+        data: [{
+            type: "column",
+            color: "#039EDA", 
+            name: "Sipariş Sayısı",
+            legendText: "Sipariş Sayısı",
+            showInLegend: true, 
+            dataPoints:[
+                { label: "Ocak 2020", y: 22 },
+                { label: "Şubat 2020", y: 43 },
+                { label: "Mart 2020", y: 156 },
+                { label: "Nisan 2020", y: 344 },
+                { label: "Mayıs 2020", y: 312 },
+                { label: "Haziran 2020", y: 267 },
+                { label: "Temmuz 2020", y: 190 },
+                { label: "Ağustos 2020", y: 197 },
+                { label: "Eylül 2020", y: 150 },
+                { label: "Ekim 2020", y: 70 },
+                { label: "Kasım 2020", y: 120 },
+                { label: "Aralık 2020", y: 69 }
+            ]
+        },
+        {
+            type: "column",	
+            name: "Ödeme (₺)",
+            color:"#142577",
+            legendText: "Ödeme",
+            axisYType: "secondary",
+            showInLegend: true,
+            dataPoints:[
+                { label: "Ocak 2020", y: 5567.23 },
+                { label: "Şubat 2020", y: 8900 },
+                { label: "Mart 2020", y: 12222 },
+                { label: "Nisan 2020", y: 33490 },
+                { label: "Mayıs 2020", y: 9888 },
+                { label: "Haziran 2020", y: 1974 },
+                { label: "Temmuz 2020", y: 8765 },
+                { label: "Ağustos 2020", y: 43345 },
+                { label: "Eylül 2020", y: 22345 },
+                { label: "Ekim 2020", y: 4555 },
+                { label: "Kasım 2020", y: 21223 },
+                { label: "Aralık 2020", y: 9876 }
+            ]
+        }]
+    });
+    chart.render();
+    }
+    function orderChart() {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title:{
+                text: ""
+            },
+            axisY: {
+                title: "",
+                gridColor: "#EEF0EF"
+            },
+            data: [{        
+                type: "column",  
+                showInLegend: false, 
+                legendMarkerColor: "grey",
+                legendText: "",
+                color:"#142577",
+                dataPoints: [      
+                    { y: 300878, label: "Ocak 2020" },
+                    { y: 266455,  label: "Şubat 2020" },
+                    { y: 169709,  label: "Mart 2020" },
+                    { y: 158400,  label: "Nisan 2020" },
+                    { y: 142503,  label: "Mayıs 2020" },
+                    { y: 101500, label: "Haziran 2020" },
+                    { y: 97800,  label: "Temmuz 2020" },
+                    { y: 80000,  label: "Ağustos 2020" },
+                    { y: 142503,  label: "Eylül 2020" },
+                    { y: 101500, label: "Ekim 2020" },
+                    { y: 97800,  label: "Kasım 2020" },
+                    { y: 80000,  label: "Aralık 2020" }
+                ]
+            }]
+        });
+        chart.render();
+    }
+    function paymentChart() {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title:{
+                text: ""
+            },
+            axisY: {
+                title: "",
+                gridColor: "#EEF0EF"
+            },
+            data: [{        
+                type: "column",  
+                showInLegend: false, 
+                legendMarkerColor: "grey",
+                legendText: "",
+                color: "#039EDA", 
+                dataPoints: [      
+                    { y: 300878, label: "Ocak 2020" },
+                    { y: 266455,  label: "Şubat 2020" },
+                    { y: 169709,  label: "Mart 2020" },
+                    { y: 158400,  label: "Nisan 2020" },
+                    { y: 142503,  label: "Mayıs 2020" },
+                    { y: 101500, label: "Haziran 2020" },
+                    { y: 97800,  label: "Temmuz 2020" },
+                    { y: 80000,  label: "Ağustos 2020" },
+                    { y: 142503,  label: "Eylül 2020" },
+                    { y: 101500, label: "Ekim 2020" },
+                    { y: 97800,  label: "Kasım 2020" },
+                    { y: 80000,  label: "Aralık 2020" }
+                ]
+            }]
+        });
+        chart.render();
+    }
+
+    function toggleAllActiveHandlers() {
+        Array.from(document.querySelectorAll('[data-chart]')).forEach(function(element, index, array) {
+            element.classList.remove('active');
+        });
+    }
+
+    window.onload = function () {
+    
+        Array.from(document.querySelectorAll('[data-chart]')).forEach(
+        function(element, index, array) {
+            var type = element.getAttribute('data-chart');
+
+            element.onclick = function() {
+
+                toggleAllActiveHandlers();
+                document.getElementById('chartContainer').innerHTML = '';
+
+                element.classList.add('active');
+                
+                "multiple"===type ? multipleCharts() : "order" === type ? orderChart() : "payment" === type && paymentChart();
+            }
+    });
+
+        multipleCharts();
+    
+    }
+</script>
+{% endblock %}

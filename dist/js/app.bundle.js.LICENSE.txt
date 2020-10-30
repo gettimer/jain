@@ -1,0 +1,16 @@
+/*!
+ * Splide.js
+ * Version  : 2.4.14
+ * License  : MIT
+ * Copyright: 2020 Naotoshi Fujita
+ */
+
+/**
+ * @author: Rinat G. http://coding.kz
+ * @copyright: Copyright (c) 2019 Rinat G.
+ * @license: Licensed under the MIT license. See http://www.opensource.org/licenses/mit-license.php
+ */
+
+//! moment.js
+
+//! moment.js locale configuration

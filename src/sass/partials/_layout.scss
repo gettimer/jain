@@ -1,0 +1,82 @@
+@for $i from 1 through 100 {
+    .mt-#{$i}{
+        margin-top:rem(1 * $i);
+    }
+    .mr-#{$i}{
+        margin-right:rem(1 * $i);
+    }
+    .mb-#{$i}{
+        margin-bottom:rem(1 * $i);
+    }
+    .ml-#{$i}{
+        margin-left:rem(1 * $i);
+    }
+  
+    .pt-#{$i}{
+      padding-top:rem(1 * $i) !important; 
+    }
+    .pr-#{$i}{
+      padding-right:rem(1 * $i) !important;
+    }
+    .pb-#{$i}{
+      padding-bottom:rem(1 * $i) !important;
+    }
+    .pl-#{$i}{
+      padding-left:rem(1 * $i) !important;
+    }
+}
+  
+.__flexStart {
+  align-items:flex-start;
+}
+  
+%transition {
+  transition:all .2s;
+}
+html {
+  font-size:16px;
+  font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-family: "ObjektivRegular";
+  background-color:var(--body-bg);
+}
+main {
+    width:100%;
+    header {
+        width:100%;
+        padding:rem(30) rem(30) rem(30) rem(175);
+        background-color:var(--soft-light-blue);
+    }
+    section {
+        padding-left:rem(175);
+        padding-right:rem(30);
+    }
+}
+
+%page-box-style {
+  width:100%;
+  box-shadow: 0 0 rem(2) rgba(0, 0, 0, 0.1);
+  border-radius: rem(8);
+  padding:rem(32);
+  background-color:white;
+}
+
+@media #{$mobile} {
+  main {
+    
+    header {
+        padding:rem(10) rem(10) rem(20) rem(10);
+    }
+    section {
+        padding-left:rem(10);
+        padding-right:rem(10);
+    }
+}
+}
+

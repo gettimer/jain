@@ -1,0 +1,79 @@
+.transaction-summary {
+    @extend %page-box-style;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .transaction-title {
+        font-size:rem(17);
+        color:var(--dark-blue);
+        font-family: "ObjektivMedium";
+    }
+
+    .transaction-total {
+        font-size:rem(33);
+        color:var(--black);
+        font-family: "ObjektivBold";
+    }
+
+    .transaction-pay {
+        width:100%;
+        height:rem(50);
+        border-radius:rem(8);
+        background-color:rgba(var(--light-blue),1);
+        color:white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size:rem(15);
+        font-family: "ObjektivMedium";
+
+        svg {
+            margin-right:rem(10);
+        }
+    }
+}
+
+.transaction-analytics {
+    @extend %page-box-style;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    .analytics-title {
+        font-size:rem(23);
+        color:var(--black);
+        font-family: "ObjektivBold";
+    }
+}
+
+.transaction-history-title {
+    font-size:rem(23);
+    color:var(--black);
+    font-family: "ObjektivBold";
+    display: flex;
+}
+
+.transaction-history-list {
+    @extend %page-box-style;
+}
+
+span {
+    &.payment-status {
+        font-family: "ObjektivRegular";
+        font-size:rem(13);
+        display:flex;
+        padding-left:rem(20);
+        background-repeat:no-repeat;
+        background-position:center left;
+
+        @each $color in $payment-status-colors {
+            &-#{nth($color,1)} {
+              color: nth($color,2);
+              background-image:url(nth($color,4));
+            }
+        }
+    }
+}

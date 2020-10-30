@@ -1,0 +1,127 @@
+$reflex-prefix: null !default;
+$legacy-support: true !default;
+$visibility-helpers: true !default;
+$reflex-columns: 12 !default; 
+$reflex-xs: 576px !default;
+$reflex-sm: 768px !default;
+$reflex-md: 992px !default;
+$reflex-lg: 1200px !default;
+$reflex-xlg: 1440px !default;
+$reflex-xxs-max: ($reflex-xs - 1);
+$reflex-xs-max: ($reflex-sm - 1);
+$reflex-sm-max: ($reflex-md - 1);
+$reflex-md-max: ($reflex-lg - 1);
+$reflex-lg-max: ($reflex-xlg - 1);
+$reflex-grid-spacing: 10px !default;
+
+$aside-width:140;
+$aside-view:rem(0);
+
+
+:root {
+
+    --body-bg:#f7f8ff;
+
+    --soft-light-blue:#E0E4F5;
+    --soft-middle-blue:#C4CBE7;
+    --light-blue:3, 158, 218;
+    --light-blue-background:#C4E5F2;
+    --soft-light-blue-background:#F6F8FF;
+    --soft-light-blue-background-v2:#F1F3FC;
+    --dark-blue:#142577;
+    --dark-blue-hover:#1E2F81;
+
+    --middle-dark-blue:#7F87AF;
+
+    --yellow:#FAEE48;
+    --red:234, 0, 0;
+    --black:#061D10;
+    --gray:#87898F;
+    --darkgray:86, 87, 91;
+    --soft-light-gray:#FAFAFA;
+    --light-gray:#B7B9BE;
+    --soft-middle-gray:#EEF0EF;
+
+    --green:17, 157, 78;
+    --orange:255, 162, 56;
+
+   
+    --reflex-columns: #{ $reflex-columns };
+    --reflex-grid-spacing: #{ $reflex-grid-spacing };
+    --reflex-xs: #{ $reflex-xs };
+    --reflex-sm: #{ $reflex-sm };
+    --reflex-md: #{ $reflex-md };
+    --reflex-lg: #{ $reflex-lg };
+    --reflex-xlg: #{ $reflex-xlg };
+    --reflex-xxs-max: #{ $reflex-xxs-max };
+    --reflex-xs-max: #{ $reflex-xs-max };
+    --reflex-sm-max: #{ $reflex-sm-max };
+    --reflex-md-max: #{ $reflex-md-max };
+    --reflex-lg-max: #{ $reflex-lg-max };
+}
+
+$order-status-colors:
+        ("awaiting",
+            rgba(var(--orange),1),
+            rgba(var(--orange),.1),
+            '/img/order-awaiting.svg'
+        ),
+        ("approved",
+            rgba(var(--green),1),
+            rgba(var(--green),.1),
+            '/img/order-approved.svg'
+        ),
+        ("stage",
+            rgba(var(--light-blue),1),
+            rgba(var(--light-blue),.1),
+            '/img/order-stage.svg'
+        ),
+        ("cancelled",
+            rgba(var(--red),1),
+            rgba(var(--red),.1),
+            '/img/order-cancelled.svg'
+        ), 
+        ("rejected",
+            rgba(var(--darkgray),1),
+            rgba(var(--darkgray),.1),
+            '/img/order-rejected.svg'
+        );
+
+$payment-status-colors:
+        ("approved",
+            rgba(var(--green),1),
+            rgba(var(--green),.1),
+            '/img/order-approved.svg'
+        ),
+        ("rejected",
+            rgba(var(--red),1),
+            rgba(var(--red),.1),
+            '/img/order-cancelled.svg'
+        );
+
+
+$mobile-screen: 690;
+$tablet-screen: 1024;
+$desktop-min-screen: 1280;
+$desktop-screen: 1400;
+$desktop-lg-screen: 1800;
+$mobile-screen-h: 650;
+$tablet-screen-h: 768;
+$desktop-screen-h: 800;
+$mobile-min-h: 935;
+$ipadPro-screen: 1366;
+$iPadPro-screen-h: 1024;
+$screen: "only screen";
+$mobile: "only screen and (max-width:#{$mobile-screen}px)";
+$tablet: "only screen and (min-width:#{$mobile-screen}px) and (max-width: #{$tablet-screen}px)";
+$desktop: "only screen and (min-width:#{$desktop-min-screen}px)";
+$desktop-lg: "only screen and (min-width:#{$desktop-screen}px) and (max-width: #{$desktop-lg-screen}px)";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+$mobile-h: "only screen and (max-height:#{$mobile-screen-h}px)";
+$tablet-h: "only screen and (min-height:#{$mobile-screen-h}px) and (max-height: #{$tablet-screen-h}px)";
+$desktop-h: "only screen and (min-height:#{$tablet-screen-h}px) and (max-height: #{$desktop-screen-h}px) ";
+$desktop-lg-h: "only screen and (min-height:#{$desktop-screen-h}px)";
+$medium-h: "only screen and (max-width:#{$iPadPro-screen-h}px) or (max-height:#{$iPadPro-screen-h}px)";
+$medium: "only screen and (max-width:#{$ipadPro-screen}px) ";
+$mobile-minh: "only screen and (max-height:#{$mobile-min-h}px) and (max-width:#{$tablet-screen}px)";
